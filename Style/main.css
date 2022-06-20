@@ -1,0 +1,139 @@
+:root {
+    --red: #E50914;
+    --black: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Nos deja el tamaño que nosotros elegimos y no aumenta. Ej: pongo 400px en una caja */
+}
+
+/* Base Elements */
+
+body {
+    background-color: var(--black);
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color:white;
+}
+
+header .container {
+    /* padding: 20px 0 0; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 2rem;
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.45); */
+}
+
+header .logo img {
+    color: var(--red);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+
+    width: 95px;
+    height: 55px;
+    margin: 0 55px;
+    padding: 5px 0 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+header nav a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+header nav a.active {
+    color: #fff;
+    font-weight: 700;
+    cursor: default;
+}
+
+/* Principal serie */
+
+.principal-serie {
+    font-size: 16px;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url('/Images/p2.jpeg');
+
+    height: 700px;
+    width: auto;
+    background-size: cover;
+
+    display: flex; /* Los deja horizontal */ 
+    flex-direction: column; /* Los deja en columna, alineados, vertical */
+    justify-content: center; /* Centralizo el texto */
+    align-content: flex-start; /* Dejo en inicio el texto y todo lo que este en principal serie */
+}
+
+.principal-serie .container {
+    margin: 40px;
+    width: 40%;
+}
+
+.principal-serie .container .serie-description {
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    width: 560px;
+}
+
+.serie-title {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+button {
+    background-color: rgba(255, 255, 255, .50);
+    border: none;
+    color: white;
+
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+button.button-active {
+    background-color: rgba(255, 255, 255);
+    color:black;
+}
+
+button.button-active:hover {
+    background-color: rgba(255, 255, 255, .85);
+}
+
+.button, .button-active, i {
+    margin-right: 8px;
+}
+
+
+/* Wrapper = envelopar -> guarda varios elementos para facilitar los elementos 
+como un todo y poder posicionarlos todos juntos, diferente del container que 
+tengo  que posicionar uno por uno */
+
+
+.footer {
+    height: 800px;
+
+}
